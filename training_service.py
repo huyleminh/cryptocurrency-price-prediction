@@ -77,7 +77,6 @@ def train_all_models():
     for config in COIN_TO_TRAIN_CONFIG.values():
         # try loading old models
         if not path.isfile("./models/{name:s}.keras".format(name=config["tickers"])):
-            print(":build")
             train_model_by_coin_pair(config["tickers"])
 
 

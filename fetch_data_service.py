@@ -22,3 +22,7 @@ def fetch_yahoo_finance_data():
 
             data_file_location = "./data/{name:s}.csv"
             data.to_csv(data_file_location.format(name=config["tickers"]))
+
+
+if __name__ == "__main__":
+    fetch_yahoo_finance_data()
